@@ -49,22 +49,18 @@
   if (stripPrev) stripPrev.addEventListener('click', function () { stripStep(-1); });
   if (stripNext) stripNext.addEventListener('click', function () { stripStep(1); });
 
-  /* ---- Responsive: scale the 1440 design frame fluidly ---- */
-  var scaler = document.querySelector('.scaler');
+  /* ---- Responsive: scale the 1440 design canvas to FULL browser width ---- */
+  var scaler = document.querySelector('.scaler'); // outer clipping frame
+  var stage = document.querySelector('.stage');   // inner design canvas
   var DESIGN_W = 1440;
   var DESIGN_H = 5281;
 
   function fit() {
-    if (!scaler) return;
-    var w = window.innerWidth;
-    if (w >= DESIGN_W) {
-      scaler.style.transform = 'none';
-      scaler.style.height = '';
-      return;
-    }
-    var scale = w / DESIGN_W;
-    scaler.style.transform = 'scale(' + scale + ')';
-    // collapse the leftover whitespace created by transform scaling
+    if (!scaler || !stage) return;
+    // Scale the 1440 canvas to span the full width (up past 1440 and down below it).
+    var scale = window.innerWidth / DESIGN_W;
+    stage.style.transform = 'scale(' + scale + ')';
+    // Frame height matches the scaled canvas so no whitespace / clipping remains.
     scaler.style.height = (DESIGN_H * scale) + 'px';
   }
   window.addEventListener('resize', fit);

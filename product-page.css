@@ -144,6 +144,8 @@ button{ font-family: inherit; cursor: pointer; border: none; background: none; }
   width: 100%;
   height: auto;
   border-radius: 14px;
+  border-top: 4px solid var(--coral);
+  border-left: 4px solid var(--coral);
 }
 .carousel-arrow{
   position: absolute;
@@ -162,8 +164,8 @@ button{ font-family: inherit; cursor: pointer; border: none; background: none; }
   transition: transform .15s ease;
 }
 .carousel-arrow:hover{ transform: translateY(-50%) scale(1.06); }
-.arrow-prev{ left: -20px; }
-.arrow-next{ right: -20px; }
+.arrow-prev{ left: 20px; }
+.arrow-next{ right: 20px; }
 
 .hero-copy{
   text-align: center;
@@ -235,16 +237,16 @@ button{ font-family: inherit; cursor: pointer; border: none; background: none; }
   text-transform: uppercase;
   color: #454F6EA6;
 }
-.feature-tags li + li::before{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 1px;
-  height: 12px;
-  background: rgba(30,42,56,.3);
-}
+  /* .feature-tags li + li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background: rgba(30,42,56,.3);
+  } */
 
 /* ============ CENTERED DESCRIPTION BAND ============ */
 .desc-band{

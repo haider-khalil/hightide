@@ -9,7 +9,7 @@
   var scaler = document.querySelector('.scaler-product'); // outer clipping frame
   var stage  = document.querySelector('.stage-product');  // inner 1440 design canvas
   var DESIGN_W = 1440;
-  var DESIGN_H = 4031; // design height at 1440 wide (matches the Figma canvas)
+  var DESIGN_H = 3900; // design height at 1440 wide (matches the Figma canvas)
 
   function fit() {
     if (!scaler || !stage) return;

@@ -112,27 +112,37 @@
       <h2 class="flavors-heading">SOMETHING BETTER IS WAITING</h2>
     </div>
 
-    <div class="container px-0">
-      <div class="row g-0">
-        <div class="col-4">
-          <article class="flavor-card" style="--bg:#E89A51">
-            <button class="cart-btn" aria-label="Add Citrus Surge to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
-            <img class="flavor-can" src="assets/product-citrus-surge.jpg" alt="High Tide Citrus Surge marijuana-infused seltzer" />
-          </article>
-        </div>
-        <div class="col-4">
-          <article class="flavor-card" style="--bg:#B0B660">
-            <button class="cart-btn" aria-label="Add Lemon Lime Splash to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
-            <img class="flavor-can" src="assets/product-lemon-lime-splash.jpg" alt="High Tide Lemon Lime Splash marijuana-infused seltzer" />
-          </article>
-        </div>
-        <div class="col-4">
-          <article class="flavor-card" style="--bg:#A86C46">
-            <button class="cart-btn" aria-label="Add Riptide Cola to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
-            <img class="flavor-can" src="assets/product-riptide-cola.jpg" alt="High Tide Riptide Cola marijuana-infused seltzer" />
-          </article>
-        </div>
+    <div class="flavor-slider">
+      <button class="slider-arrow slider-prev" aria-label="Previous flavors">
+        <svg width="22" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M44 24H4M4 24L22 6M4 24L22 42" stroke="#4B5279" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="flavor-track" id="flavorTrack">
+        <article class="flavor-card" style="--bg:#E89A51">
+          <button class="cart-btn" aria-label="Add Citrus Surge to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
+          <img class="flavor-can" src="assets/product-citrus-surge.jpg" alt="High Tide Citrus Surge marijuana-infused seltzer" />
+        </article>
+        <article class="flavor-card" style="--bg:#B0B660">
+          <button class="cart-btn" aria-label="Add Lemon Lime Splash to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
+          <img class="flavor-can" src="assets/product-lemon-lime-splash.jpg" alt="High Tide Lemon Lime Splash marijuana-infused seltzer" />
+        </article>
+        <article class="flavor-card" style="--bg:#A86C46">
+          <button class="cart-btn" aria-label="Add Riptide Cola to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
+          <img class="flavor-can" src="assets/product-riptide-cola.jpg" alt="High Tide Riptide Cola marijuana-infused seltzer" />
+        </article>
+        <article class="flavor-card" style="--bg:#DF796A">
+          <button class="cart-btn" aria-label="Add Island Punch to cart"><img src="assets/cart.webp" alt="" aria-hidden="true" /></button>
+          <img class="flavor-can" src="assets/product-island-punch.jpg" alt="High Tide Island Punch marijuana-infused seltzer" />
+        </article>
       </div>
+
+      <button class="slider-arrow slider-next" aria-label="Next flavors">
+        <svg width="22" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 24H44M44 24L26 6M44 24L26 42" stroke="#4B5279" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </section>
 

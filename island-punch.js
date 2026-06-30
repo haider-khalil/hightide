@@ -33,4 +33,21 @@
   window.addEventListener('resize', fit);
   window.addEventListener('load', fit); // re-fit once fonts/images settle
   fit();
+
+  /* ---- Flavor slider (arrows scroll the track one card at a time;
+     swipe works natively via overflow-x). Uses offsetWidth (layout px)
+     so it's correct even while the desktop canvas is transform-scaled. ---- */
+  var track = document.getElementById('flavorTrack');
+  var prevBtn = document.querySelector('.slider-prev');
+  var nextBtn = document.querySelector('.slider-next');
+
+  function cardStep() {
+    var card = track && track.querySelector('.flavor-card');
+    return card ? card.offsetWidth : 0;
+  }
+  function slide(dir) {
+    if (track) track.scrollBy({ left: dir * cardStep(), behavior: 'smooth' });
+  }
+  if (prevBtn) prevBtn.addEventListener('click', function () { slide(-1); });
+  if (nextBtn) nextBtn.addEventListener('click', function () { slide(1); });
 })();

@@ -379,17 +379,49 @@ button{ font-family: inherit; cursor: pointer; border: none; background: none; }
   line-height: 1;
   letter-spacing: .5px;
 }
-/* cards live in a Bootstrap .row.g-0 > .col-md-4; each card is the
-   product photo (its background already matches --bg) plus a cart button */
+/* ---- flavor slider (arrows + swipe; 3 cards per view on desktop) ---- */
+.flavor-slider{
+  position: relative;
+}
+.flavor-track{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;   /* hide scrollbar (IE/Edge) */
+  scrollbar-width: none;      /* hide scrollbar (Firefox) */
+}
+.flavor-track::-webkit-scrollbar{ display: none; } /* hide scrollbar (WebKit) */
+
 .flavor-card{
   position: relative;
-  height: 100%;
+  flex: 0 0 33.3333%;   /* 3 cards per view */
+  scroll-snap-align: start;
   background: var(--bg);
 }
 .flavor-can{
   width: 100%;
   height: auto;
 }
+
+.slider-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: #F7ECCB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 16px rgba(30,42,56,.18);
+  z-index: 5;
+  transition: transform .15s ease;
+}
+.slider-arrow:hover{ transform: translateY(-50%) scale(1.06); }
+.slider-prev{ left: 20px; }
+.slider-next{ right: 20px; }
 .cart-btn{
   position: absolute;
   top: 22px;
@@ -502,10 +534,14 @@ button{ font-family: inherit; cursor: pointer; border: none; background: none; }
   /* ---- Flavors / SOMETHING BETTER IS WAITING ---- */
   .flavors-head{ padding: 28px 20px 24px; }
   .flavors-heading{ font-size: 30px; }
+  .flavor-card{ flex-basis: 50%; }   /* 2 cards per view on mobile */
+  .slider-arrow{ width: 44px; height: 44px; }
+  .slider-prev{ left: 8px; }
+  .slider-next{ right: 8px; }
 
   /* ---- Footer ---- */
   .site-footer{ padding: 48px 0 40px; }
-  .footer-col{ text-align: center; margin-bottom: 28px; }
+  .footer-col{ text-align: left; margin-bottom: 28px; }
   .footer-col:last-child{ margin-bottom: 0; }
-  .socials{ justify-content: center; }
+  .socials{ justify-content: left; }
 }

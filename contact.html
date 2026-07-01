@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High Tide — Contact &amp; FAQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Same Google font families used by the homepage (index.html) -->
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Oswald:wght@400;500;600;700&family=Permanent+Marker&family=Righteous&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <div class="contact-page">
+  <div class="scaler-contact">
+  <div class="stage-contact">
+
+    <!-- ============ TOP SECTION — bg: contact-header.png (teal, torn bottom) ============ -->
+    <div class="ab-top">
+    <!-- ============ HEADER ============ -->
+    <header class="ab-header">
+      <div class="ab-header-inner">
+        <a href="index.html" class="ab-logo" aria-label="High Tide home">HIGH TIDE</a>
+
+        <!-- mobile hamburger toggle (hidden on desktop) -->
+        <button class="ab-burger" id="abBurger" aria-label="Open menu" aria-expanded="false" aria-controls="abMenu">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M3 6.5h18M3 12h18M3 17.5h18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+        </button>
+
+        <div class="ab-menu" id="abMenu">
+          <button class="ab-menu-close" id="abMenuClose" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          </button>
+          <nav class="ab-nav" aria-label="Primary">
+            <a href="index.html#about">ABOUT US</a>
+            <a href="index.html#shop">SHOP</a>
+            <a href="index.html#contact">CONTACT &amp; FAQ</a>
+          </nav>
+          <div class="ab-actions">
+            <a class="ab-icon" href="#" aria-label="Account">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.418 3.582-7 8-7s8 2.582 8 7"/></svg>
+            </a>
+            <a class="ab-icon" href="#" aria-label="Cart">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.2l2.3 12.1a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.25L21.5 7H6.2"/></svg>
+            </a>
+            <a href="#reach" class="ab-reachout">SHOP NOW</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ SECTION 1 — HERO / INTRO (teal) ============ -->
+    <section class="ab-hero">
+      <h1 class="ab-hero-title">HOW CAN WE HELP?</h1>
+      <p class="ab-hero-sub">Find a store near you, drop us a line, or get answers to the questions <br /> you're probably already thinking.</p>
+      <div class="hero-btns">
+        <a href="#store-locator" class="ab-btn hero-btn">FIND A STORE</a>
+        <a href="#contact-form" class="ab-btn hero-btn">CONTACT US</a>
+      </div>
+    </section>
+    </div><!-- /ab-top -->
+
+    <!-- ============ SECTION 2 — STORE LOCATOR (cream, centered) ============ -->
+    <section class="ct-locator" id="store-locator">
+      <div class="ct-locator-inner">
+        <h2 class="ct-locator-title">FIND THE TIDE NEAR YOU</h2>
+        <p class="ct-locator-desc">Enter your zip or city to find the closest store carrying High Tide.</p>
+
+        <!-- <form class="ct-search" onsubmit="return false;">
+          <input type="text" class="ct-search-input" placeholder="City, state, or zip code..." aria-label="City, state, or zip code" />
+          <button type="submit" class="ct-search-btn">SEARCH</button>
+        </form> -->
+
+        <div class="ht-store-locator-iframe-wrap">
+          <span class="ht-map-placeholder" aria-hidden="true">MAP READY</span>
+          <iframe
+            class="ht-store-locator-iframe"
+            src="/pages/store-locator"
+            title="High Tide Store Locator"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 3 — SEND A MESSAGE (cream, two-column) ============ -->
+    <section class="ct-contact" id="contact-form">
+      <div class="ct-contact-inner">
+        <div class="ct-form-col">
+          <h2 class="ct-form-title">SEND A MESSAGE</h2>
+          <form class="ct-form" onsubmit="return false;">
+            <label class="ct-field"><span>FIRST NAME</span><input type="text" name="first" autocomplete="given-name" /></label>
+            <label class="ct-field"><span>LAST NAME</span><input type="text" name="last" autocomplete="family-name" /></label>
+            <label class="ct-field"><span>EMAIL</span><input type="email" name="email" autocomplete="email" /></label>
+            <label class="ct-field"><span>TOPIC</span><input type="text" name="topic" /></label>
+            <label class="ct-field ct-field-msg"><span>MESSAGE</span><textarea name="message" rows="1"></textarea></label>
+            <button type="submit" class="ct-send-btn">SEND MESSAGE</button>
+            <p class="ct-response"><span class="ct-bolt" aria-hidden="true">
+              <svg xmlns="http://w3.org" width="6" height="6" viewBox="0 0 6 6" fill="none"><circle cx="3" cy="3" r="3" fill="#E9A830"/></svg></span> Average response under 24 hours</p>
+          </form>
+        </div>
+
+        <div class="ct-tagline-col">
+          <h2 class="ct-tagline">WE'RE PRETTY<br />CHILL PEOPLE</h2>
+          <p class="ct-tagline-sub">We read every message.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECTION 4 — WE'VE GOT ANSWERS (cream, FAQ accordion) ============ -->
+    <section class="ct-faq">
+      <div class="ct-faq-inner">
+        <div class="ct-faq-intro">
+          <h2 class="ct-faq-title">WE'VE GOT<br />ANSWERS</h2>
+          <p class="ct-faq-sub">Everything you need to know about High Tide, THC beverages, and what makes us different.</p>
+        </div>
+
+        <div class="ct-faq-list" id="faqList">
+          <div class="ct-faq-item is-open">
+            <button class="ct-faq-q" aria-expanded="true">
+              <span class="ct-faq-qtext">WHAT EXACTLY IS HIGH TIDE?</span>
+              <span class="ct-faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="ct-faq-a">
+              <p>High Tide is a cannabis-infused sparkling seltzer with zero alcohol. Each 12oz contains two servings of 5 mgs of nano-emulsified THC, natural fruit flavors, and and never any artificial dyes, sweetener or flavors. The upgrade to a cold drink you already love — minus the hangover, plus a clean buzz.</p>
+            </div>
+          </div>
+
+          <div class="ct-faq-item">
+            <button class="ct-faq-q" aria-expanded="false">
+              <span class="ct-faq-qtext">DOES IT TASTE LIKE CANNABIS?</span>
+              <span class="ct-faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="ct-faq-a">
+              <p>No green taste. Seriously. We spent a long time on formulation to ensure every sip tastes exactly like what's on the label. The THC is nano-emulsified and fully masked by natural flavors.</p>
+            </div>
+          </div>
+
+          <div class="ct-faq-item">
+            <button class="ct-faq-q" aria-expanded="false">
+              <span class="ct-faq-qtext">HOW LONG DOES IT TAKE TO FEEL?</span>
+              <span class="ct-faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="ct-faq-a">
+              <p>Most people begin to feel effects within 10&ndash;30 minutes, depending on metabolism, tolerance, and whether you've eaten.</p>
+            </div>
+          </div>
+
+          <div class="ct-faq-item">
+            <button class="ct-faq-q" aria-expanded="false">
+              <span class="ct-faq-qtext">ARE THERE ARTIFICIAL INGREDIENTS?</span>
+              <span class="ct-faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="ct-faq-a">
+              <p>None. All-natural flavors, sparkling water, and clean ingredients throughout. No synthetic dyes, no preservatives.</p>
+            </div>
+          </div>
+
+          <div class="ct-faq-item">
+            <button class="ct-faq-q" aria-expanded="false">
+              <span class="ct-faq-qtext">IS IT SWEET?</span>
+              <span class="ct-faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="ct-faq-a">
+              <p>No heavy syrupy taste here. High Tide is made with clean flavor and a lighter finish.</p>
+            </div>
+          </div>
+
+          <div class="ct-faq-item">
+            <button class="ct-faq-q" aria-expanded="false">
+              <span class="ct-faq-qtext">WHAT DOES HIGH TIDE FEEL LIKE?</span>
+              <span class="ct-faq-toggle" aria-hidden="true"></span>
+            </button>
+            <div class="ct-faq-a">
+              <p>Light, social, and easygoing. Think lifted mood, smooth flavor, and a buzz designed to go with the moment, not take it over.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER (teal) ============ -->
+    <footer class="ct-footer">
+      <div class="ab-footer">
+        <div class="ab-footer-cols">
+          <div class="ab-footer-col ab-footer-brand">
+            <div class="ab-footer-logo">HIGH TIDE</div>
+            <p class="ab-footer-fine">High Tide contains THC. 21+</p>
+          </div>
+          <div class="ab-footer-col">
+            <h5>Quick links</h5>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html#about">About Us</a></li>
+              <li><a href="contact.html">Contact &amp; FAQ</a></li>
+            </ul>
+          </div>
+          <div class="ab-footer-col">
+            <h5>Useful links</h5>
+            <ul>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="ab-footer-col">
+            <h5>Connect</h5>
+            <div class="ab-socials">
+              <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/></svg></a>
+              <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 11v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /stage-contact -->
+  </div><!-- /scaler-contact -->
+  </div><!-- /contact-page -->
+
+  <script src="contact.js"></script>
+</body>
+</html>
